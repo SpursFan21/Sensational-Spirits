@@ -1,15 +1,24 @@
+<!-- app/views/layouts/application.html.erb -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>MyApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'header', media: 'all', 'data-turbolinks-track': 'reload' %> <!-- Include header.css -->
 
-  <body>
-    <%= yield %>
-  </body>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Optional: Add Bootstrap JavaScript (for interactive components like modals, dropdowns, etc.) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <%= render 'shared/header' %> <!-- Include header partial -->
+  <%= yield %>
+</body>
 </html>

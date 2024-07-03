@@ -1,0 +1,20 @@
+<!-- app/views/shared/_header.html.erb -->
+<header class="container-fluid bg-light">
+  <div class="row align-items-center">
+    <div class="col">
+      <h1>Sensational Spirits</h1>
+    </div>
+    <div class="col">
+      <%= link_to "Review Menu", "#", class: "btn btn-primary" %>
+    </div>
+    <div class="col">
+      <%= form_with(url: search_path, method: "get", class: "form-inline") do %>
+        <%= text_field_tag :query, nil, class: "form-control mr-sm-2", placeholder: "Search" %>
+        <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+    </div>
+    <div class="col">
+      <%= image_tag "account-logo.png", class: "img-fluid", alt: "Account" %>
+    </div>
+  </div>
+</header>

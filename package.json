@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "A ruby on rails aplication",
+  "main": "index.js",
+  "repository": "https://github.com/SpursFan21/SensationalSpirits.git",
+  "author": "Duncan Turner",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@rails/webpacker": "5.4.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
