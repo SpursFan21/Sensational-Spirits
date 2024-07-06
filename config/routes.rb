@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/search', to: 'search#search', as: 'search'
 
   # Health check route
-  get "up" => "rails/health#show", as: :rails_health_check
+  get "up" => "rails/health#show", as: :rails_health_checke
 
   # Root route
   root 'home#index'

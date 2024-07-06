@@ -1,20 +1,57 @@
-<!-- app/views/shared/_header.html.erb -->
-<header class="container-fluid bg-light">
-  <div class="row align-items-center">
-    <div class="col">
-      <h1>Sensational Spirits</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <style>
+    .form-control {
+      border: none; /* Remove border around form control */
+      box-shadow: none; /* Remove shadow around form control */
+    }
+    .account-logo {
+      border-radius: 50%; /* Make the image circular */
+      transition: transform 0.3s; /* Add transition for transform */
+    }
+    .account-logo:hover {
+      transform: scale(1.1); /* Scale up when hovered */
+    }
+    .header-title {
+      transition: transform 0.3s, color 0.3s; /* Add transition for transform and color */
+    }
+    .header-title:hover {
+      transform: scale(1.1); /* Scale up when hovered */
+      color: gold; /* Change font color to gold when hovered */
+    }
+    .nav-item {
+      transition: transform 0.3s; /* Add transition for transform */
+    }
+    .nav-item:hover {
+      transform: scale(1.1); /* Scale up when hovered */
+    }
+  </style>
+</head>
+<body style="margin: 0; font-family: 'Oleo Script', cursive;">
+
+  <header class="header container-fluid bg-light" style="background-color: #ab2330; color: white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 16vh; margin: 0 !important;">
+    <div class="header-item" style="flex: 1; text-align: center;">
+      <h1 class="header-title" style="margin: 0; font-weight: normal; font-size: 3vw;">Sensational Spirits</h1>
     </div>
-    <div class="col">
-      <%= link_to "Review Menu", "#", class: "btn btn-primary" %>
+    <div class="header-item" style="flex: 1; text-align: center;">
+      <%= link_to "Spirits", "#", class: "btn btn-primary nav-item", style: "margin: 0; font-size: 2.5vw; background-color: #f5b042; border-color: #f5b042; transition: transform 0.3s, background-color 0.3s, border-color 0.3s; border-radius: 20px; padding: 0 2vw;", title: "scale(1.1); when hovered"%>
     </div>
-    <div class="col">
-      <%= form_with(url: search_path, method: "get", class: "form-inline") do %>
-        <%= text_field_tag :query, nil, class: "form-control mr-sm-2", placeholder: "Search" %>
-        <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+    <div class="header-item" style="flex: 1; text-align: center;">
+      <%= form_with(url: search_path, method: "get", class: "form-inline search-bar", style: "max-width: 50%; margin: 0 auto;") do %>
+        <%= text_field_tag :query, nil, class: "form-control mr-sm-2", placeholder: "Search", style: "max-width: 100%; font-size: 1.5vw; padding-left: 0; padding-right: 0; border-radius: 10px;" %>
+        <%= submit_tag "Search", class: "btn btn-outline-success my-2 my-sm-0", style: "background-color: #f5b042; border-color: #f5b042; color: white; transition: transform 0.3s, background-color 0.3s, color 0.3s; font-size: 1.5vw; border-radius: 20px;" %>
       <% end %>
     </div>
-    <div class="col">
-      <%= image_tag "account-logo.png", class: "img-fluid", alt: "Account" %>
+    <div class="header-item" style="flex: 1; text-align: center;">
+      <%= image_tag "account-logo.png", class: "img-fluid account-logo", alt: "Account", style: "max-width: 100%; width: 5vw; border-radius: 50%;" %>
     </div>
-  </div>
-</header>
+  </header>
+
+</body>
+</html>

@@ -6,19 +6,14 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
+  <!-- Link to Google Fonts for Oleo Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag 'header', media: 'all', 'data-turbolinks-track': 'reload' %> <!-- Include header.css -->
-
-  <!-- Add Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Optional: Add Bootstrap JavaScript (for interactive components like modals, dropdowns, etc.) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' if controller_name == 'home' && action_name == 'index' %> <!-- Include index.css only for the home page -->
 </head>
 <body>
-  <%= render 'shared/header' %> <!-- Include header partial -->
+  <%= render 'shared/header' %> <!-- Include header partial globally -->
   <%= yield %>
 </body>
 </html>
