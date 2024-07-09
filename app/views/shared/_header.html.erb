@@ -37,10 +37,12 @@
 
   <header class="header container-fluid bg-light" style="background-color: #ab2330; color: white; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 16vh; margin: 0 !important;">
     <div class="header-item" style="flex: 1; text-align: center;">
-      <h1 class="header-title" style="margin: 0; font-weight: normal; font-size: 3vw;">Sensational Spirits</h1>
+      <%= link_to root_path, style: "text-decoration: none; color: inherit;" do %>
+        <h1 class="header-title" style="margin: 0; font-weight: normal; font-size: 3vw;">Sensational Spirits</h1>
+      <% end %>
     </div>
     <div class="header-item" style="flex: 1; text-align: center;">
-      <%= link_to "Spirits", "#", class: "btn btn-primary nav-item", style: "margin: 0; font-size: 2.5vw; background-color: #f5b042; border-color: #f5b042; transition: transform 0.3s, background-color 0.3s, border-color 0.3s; border-radius: 20px; padding: 0 2vw;", title: "scale(1.1); when hovered"%>
+      <%= link_to "Spirits", spirits_index_path, class: "btn btn-primary nav-item", style: "margin: 0; font-size: 2.5vw; background-color: #f5b042; border-color: #f5b042; transition: transform 0.3s, background-color 0.3s, border-color 0.3s; border-radius: 20px; padding: 0 2vw;", title: "scale(1.1); when hovered" %>
     </div>
     <div class="header-item" style="flex: 1; text-align: center;">
       <%= form_with(url: search_path, method: "get", class: "form-inline search-bar", style: "max-width: 50%; margin: 0 auto;") do %>
