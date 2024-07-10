@@ -66,4 +66,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-# Webpacker for managing JavaScript assets
+# MongoDB gems
+gem "mongo"

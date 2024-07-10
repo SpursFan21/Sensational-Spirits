@@ -7,36 +7,48 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      height: 10vh;
       background-color: #f8f9fa;
     }
     .button-row {
       display: flex;
       gap: 20px;
     }
-    .btn {
+    .btn1 {
       padding: 10px 20px;
       font-size: 1.2em;
       color: white;
-      background-color: #007bff;
+      background-color: #f5b042;
       border: none;
       border-radius: 5px;
       transition: transform 0.3s;
+      width: 10vw;
     }
-    .btn:hover {
-      transform: scale(1.1);
+    .btn1:hover {
+      transform: scale(1.1); /* Scale up by 10% on hover */
       background-color: #0056b3;
+    }
+    .image {
+      background-image: url("/assets/macallan_distillery.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="button-row">
-      <button class="btn">Button 1</button>
-      <button class="btn">Button 2</button>
-      <button class="btn">Button 3</button>
-      <button class="btn">Button 4</button>
+      <button class="btn1">Whisky</button>
+      <button class="btn1">Gin</button>
+      <button class="btn1">Rum</button>
+      <button class="btn1">Vodka</button>
+      <button class="btn1">Brandy</button>
+      <button class="btn1">Other</button>
     </div>
+  </div>
+  <div class="image">
+    <!-- Optional content inside the image div -->
   </div>
 </body>
 </html>
