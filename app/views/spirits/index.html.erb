@@ -2,13 +2,25 @@
 <html>
 <head>
   <title>Spirits Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-image: url("/assets/macallan_distillery.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
     .container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 10vh;
-      background-color: #f8f9fa;
+      background-color: rgba(248, 249, 250, 0.8); /* semi-transparent background */
+      position: relative;
+      z-index: 1;
     }
     .button-row {
       display: flex;
@@ -23,33 +35,123 @@
       border-radius: 5px;
       transition: transform 0.3s;
       width: 10vw;
+      position: relative;
+      z-index: 2;
     }
     .btn1:hover {
-      transform: scale(1.1); /* Scale up by 10% on hover */
+      transform: scale(1.1);
       background-color: #0056b3;
     }
-    .image {
-      background-image: url("/assets/macallan_distillery.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position below the button */
+      left: 36vh;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      z-index: 3;
+      width: 10vw; /* Match the width of the button */
+    }
+    .dropdown a {
+      color: black;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown a:hover {
+      background-color: #f1f1f1;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="button-row">
-      <button class="btn1">Whisky</button>
-      <button class="btn1">Gin</button>
-      <button class="btn1">Rum</button>
-      <button class="btn1">Vodka</button>
-      <button class="btn1">Brandy</button>
+      <div class="btn1-wrapper">
+        <button class="btn1" id="whisky-btn">Whisky</button>
+        <div class="dropdown" id="whisky-dropdown">
+          <a href="#">Single Malt Scotch</a>
+          <a href="#">Scottish Blends</a>
+          <a href="#">American and Bourbon</a>
+          <a href="#">Australian</a>
+          <a href="#">Indian</a>
+          <a href="#">Irish</a>
+          <a href="#">Japanese</a>
+          <a href="#">New Zealand</a>
+          <a href="#">Other</a>
+        </div>
+      </div>
+      <div class="btn1-wrapper">
+        <button class="btn1" id="gin-btn">Gin</button>
+        <div class="dropdown" id="gin-dropdown">
+          <a href="#">London Dry</a>
+          <a href="#">Plymouth</a>
+          <a href="#">Old Tom</a>
+          <a href="#">Navy Strength</a>
+          <a href="#">Flavoured Gin</a>
+          <a href="#">Genever</a>
+          <a href="#">New World</a>
+        </div>
+      </div>
+      <div class="btn1-wrapper">
+        <button class="btn1" id="rum-btn">Rum</button>
+        <div class="dropdown" id="rum-dropdown">
+          <a href="#">White Rum</a>
+          <a href="#">Gold Rum</a>
+          <a href="#">Dark Rum</a>
+          <a href="#">Spiced Rum</a>
+          <a href="#">Flavoured Rum</a>
+          <a href="#">Other</a>
+        </div>
+      </div>
+      <div class="btn1-wrapper">
+        <button class="btn1" id="vodka-btn">Vodka</button>
+        <div class="dropdown" id="vodka-dropdown">
+          <a href="#">Plain Vodka</a>
+          <a href="#">Flavoured Vodka</a>
+          <a href="#">Infused Vodka</a>
+        </div>
+      </div>
+      <div class="btn1-wrapper">
+        <button class="btn1" id="brandy-btn">Brandy</button>
+        <div class="dropdown" id="brandy-dropdown">
+          <a href="#">Cognac</a>
+          <a href="#">Armagnac</a>
+          <a href="#">Calvados</a>
+          <a href="#">Brandy de Jerez</a>
+          <a href="#">Metaxa</a>
+          <a href="#">Pisco</a>
+          <a href="#">Grappa</a>
+        </div>
+      </div>
       <button class="btn1">Other</button>
     </div>
   </div>
-  <div class="image">
-    <!-- Optional content inside the image div -->
-  </div>
+  <script>
+    document.getElementById('whisky-btn').addEventListener('click', function() {
+      var dropdown = document.getElementById('whisky-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('gin-btn').addEventListener('click', function() {
+      var dropdown = document.getElementById('gin-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('rum-btn').addEventListener('click', function() {
+      var dropdown = document.getElementById('rum-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('vodka-btn').addEventListener('click', function() {
+      var dropdown = document.getElementById('vodka-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('brandy-btn').addEventListener('click', function() {
+      var dropdown = document.getElementById('brandy-dropdown');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
-
