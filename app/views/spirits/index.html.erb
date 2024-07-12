@@ -42,24 +42,39 @@
       transform: scale(1.1);
       background-color: #0056b3;
     }
-    .dropdown {
+    .dropdown, .dropdown1, .dropdown2, .dropdown3, .dropdown4 {
       display: none;
       position: absolute;
       top: 100%; /* Position below the button */
-      left: 36vh;
       background-color: #fff;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       border-radius: 5px;
       z-index: 3;
       width: 10vw; /* Match the width of the button */
+      font-family: 'Roboto', sans-serif;
     }
-    .dropdown a {
+    .dropdown {
+      left: 36vh;
+    }
+    .dropdown1 {
+      left: 59vh;
+    }
+    .dropdown2 {
+      left: 82vh;
+    }
+    .dropdown3 {
+      left: 105vh;
+    }
+    .dropdown4 {
+      left: 128vh;
+    }
+    .dropdown a, .dropdown1 a, .dropdown2 a, .dropdown3 a, .dropdown4 a {
       color: black;
       padding: 10px 20px;
       text-decoration: none;
       display: block;
     }
-    .dropdown a:hover {
+    .dropdown a:hover, .dropdown1 a:hover, .dropdown2 a:hover, .dropdown3 a:hover, .dropdown4 a:hover {
       background-color: #f1f1f1;
     }
   </style>
@@ -83,7 +98,7 @@
       </div>
       <div class="btn1-wrapper">
         <button class="btn1" id="gin-btn">Gin</button>
-        <div class="dropdown" id="gin-dropdown">
+        <div class="dropdown1" id="gin-dropdown">
           <a href="#">London Dry</a>
           <a href="#">Plymouth</a>
           <a href="#">Old Tom</a>
@@ -95,7 +110,7 @@
       </div>
       <div class="btn1-wrapper">
         <button class="btn1" id="rum-btn">Rum</button>
-        <div class="dropdown" id="rum-dropdown">
+        <div class="dropdown2" id="rum-dropdown">
           <a href="#">White Rum</a>
           <a href="#">Gold Rum</a>
           <a href="#">Dark Rum</a>
@@ -106,7 +121,7 @@
       </div>
       <div class="btn1-wrapper">
         <button class="btn1" id="vodka-btn">Vodka</button>
-        <div class="dropdown" id="vodka-dropdown">
+        <div class="dropdown3" id="vodka-dropdown">
           <a href="#">Plain Vodka</a>
           <a href="#">Flavoured Vodka</a>
           <a href="#">Infused Vodka</a>
@@ -114,7 +129,7 @@
       </div>
       <div class="btn1-wrapper">
         <button class="btn1" id="brandy-btn">Brandy</button>
-        <div class="dropdown" id="brandy-dropdown">
+        <div class="dropdown4" id="brandy-dropdown">
           <a href="#">Cognac</a>
           <a href="#">Armagnac</a>
           <a href="#">Calvados</a>
